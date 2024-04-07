@@ -1,0 +1,70 @@
+project-root/
+│
+├── src/
+│   ├── controllers/
+│   │   ├── userController.ts
+│   │   ├── postController.ts
+│   │   ├── likeController.ts
+│   │   ├── commentController.ts
+│   │   ├── notificationController.ts
+│   │   └── index.ts (export all controllers)
+│   │
+│   ├── middleware/
+│   │   ├── authenticationMiddleware.ts
+│   │   ├── errorHandlingMiddleware.ts
+│   │   └── index.ts (export all middleware)
+│   │
+│   ├── models/
+│   │   ├── User.ts
+│   │   ├── Post.ts
+│   │   ├── Like.ts
+│   │   ├── Comment.ts
+│   │   ├── Notification.ts
+│   │   └── index.ts (export all models)
+│   │
+│   ├── routes/
+│   │   ├── userRoutes.ts
+│   │   ├── postRoutes.ts
+│   │   ├── likeRoutes.ts
+│   │   ├── commentRoutes.ts
+│   │   ├── notificationRoutes.ts
+│   │   └── index.ts (export all routes)
+│   │
+│   ├── services/
+│   │   ├── userService.ts
+│   │   ├── postService.ts
+│   │   ├── likeService.ts
+│   │   ├── commentService.ts
+│   │   ├── notificationService.ts
+│   │   └── index.ts (export all services)
+│   │
+│   ├── utils/
+│   │   ├── jwtUtils.ts
+│   │   ├── cacheUtils.ts
+│   │   └── ...
+│   │
+│   ├── app.ts (main entry point)
+│   ├── config.ts (configuration file)
+│   └── server.ts (server initialization)
+│
+├── test/
+│   ├── unit/
+│   │   ├── userController.test.ts
+│   │   ├── postController.test.ts
+│   │   ├── likeController.test.ts
+│   │   ├── commentController.test.ts
+│   │   ├── notificationController.test.ts
+│   │   └── ...
+│   ├── integration/
+│   │   ├── userIntegration.test.ts
+│   │   ├── postIntegration.test.ts
+│   │   ├── likeIntegration.test.ts
+│   │   ├── commentIntegration.test.ts
+│   │   ├── notificationIntegration.test.ts
+│   │   └── ...
+│   └── setup.ts (test setup file)
+│
+├── .gitignore
+├── package.json
+├── tsconfig.json
+└── README.md
