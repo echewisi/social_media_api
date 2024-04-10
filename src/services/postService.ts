@@ -2,6 +2,7 @@
 
 import { PostModel } from '../models/Post';
 import { UserModel } from '../models/User';
+import NotificationService from './notificationService';
 
 class PostService {
     // Method to create a new post
@@ -29,7 +30,13 @@ class PostService {
             // Add user to likes array
             post.likes.push(userId);
             await post.save();
-            return post;
+            // Send notification to the post owner
+            const postOwner = await UserModel.findById(post.author);
+            if (postOwner) {
+                const notificationMessage = `User ${userId} liked your post`;
+                await NotificationService.createNotification(postOwner._id, 'like', notificationMessage);
+            }
+            return post;        
         } catch (error) {
             throw error;
         }
